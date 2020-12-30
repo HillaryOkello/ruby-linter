@@ -1,2 +1,19 @@
 #!/usr/bin/env ruby
 require_relative '../lib/checks.rb'
+
+check = ErrorCheck.new(ARGV.first)
+
+check.tag_error
+check.end_error
+check.trailing_spaces
+check.empty_line_error
+
+if check.errors.empty? && check.checker.err_msg.empty?
+  puts 'No offenses'.colorize(:green) + ' detected'
+else
+  check.errors.uniq.each do |err|
+    puts "#{check.checker.file_path.colorize(:blue)} : #{err.colorize(:red)}"
+  end
+end
+
+puts check.checker.err_msg if check.checker.file_lines.empty?
