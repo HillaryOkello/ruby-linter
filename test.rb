@@ -8,7 +8,7 @@ def my_each
     i += 1
 
   self
-end
+
 
 # 2.my_each_with_index
 def my_each_with_index

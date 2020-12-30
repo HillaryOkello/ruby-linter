@@ -44,10 +44,6 @@ class ErrorCheck
     log_error("Lint/Syntax: Unexpected 'end'") if status.eql?(-1)
   end
 
-  def log_error(error_msg)
-    @errors << error_msg
-  end
-
   def trailing_spaces
     @checker.file_lines.each_with_index do |val, index|
       if val[-2] == ' ' && !val.strip.empty?
@@ -64,6 +60,12 @@ class ErrorCheck
       check_end_empty_line(val, indx)
       check_do_empty_line(val, indx)
     end
+  end
+
+  private
+
+  def log_error(error_msg)
+    @errors << error_msg
   end
 
   def check_class_empty_line(val, indx)
