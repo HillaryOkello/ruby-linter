@@ -1,6 +1,6 @@
 require 'colorize'
 require 'strscan'
-require_relative '../lib/file_reader.rb'
+require_relative '../lib/file_reader'
 
 class ErrorCheck
   attr_reader :checker, :errors
@@ -95,5 +95,4 @@ class ErrorCheck
 
     log_error("line:#{indx + 2} #{msg}") if @checker.file_lines[indx + 1].strip.empty?
   end
-
 end
