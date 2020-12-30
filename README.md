@@ -1,9 +1,8 @@
 # Ruby Linter
-# About 
 
 This is a Ruby linter created using Ruby programming language. The aim of this linter is to make sure Ruby code is written well and improves the code.
 
-# The Build
+# About
 The custom Ruby linter currently checks/detects for the following errors/warnings.
 - check for missing/unexpected tags i.e. '( )', '[ ]', and '{ }'
 - check missing/unexpected end
