@@ -1,7 +1,7 @@
 require_relative '../lib/checks'
 
 describe ErrorCheck do
-  let (:checker) { ErrorCheck.new('test.rb') }
+  let(:checker) { ErrorCheck.new('test.rb') }
 
   describe '#tag_error' do
     it "Checks for missing/unexpected tags eg '( )', '[ ]', and '{ }'" do
