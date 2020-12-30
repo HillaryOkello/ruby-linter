@@ -19,8 +19,6 @@ def my_each_with_index
     i += 1
   end
   self
-
-
 end
 
 

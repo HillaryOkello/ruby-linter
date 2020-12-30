@@ -62,7 +62,7 @@ class ErrorCheck
       check_class_empty_line(val, indx)
       check_method_empty_line(val, indx)
       check_end_empty_line(val, indx)
-      check_do_empty_line(str_val, indx)
+      check_do_empty_line(val, indx)
     end
   end
 
@@ -89,9 +89,9 @@ class ErrorCheck
     log_error("line:#{indx} Extra empty line detected at block body end") if @checker.file_lines[indx - 1].strip.empty?
   end
 
-  def check_do_empty_line(str_val, indx)
+  def check_do_empty_line(val, indx)
     msg = 'Extra empty line detected at block body beginning'
-    return unless str_val.strip.split(' ').include?('do')
+    return unless val.strip.split(' ').include?('do')
 
     log_error("line:#{indx + 2} #{msg}") if @checker.file_lines[indx + 1].strip.empty?
   end
