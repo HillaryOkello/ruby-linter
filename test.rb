@@ -23,15 +23,3 @@ def my_each_with_index
 
 
 end
-
-
-
-# def my_select
-#   return to_enum(:my_select) unless block_given?
-
-#   select_arr_result = []
-#   each do |item|
-#     select_arr_result << item if yield(item)
-#   end
-#   select_arr_result
-# end
