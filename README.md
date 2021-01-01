@@ -108,6 +108,7 @@ end
 
 ## Built With
 - Ruby
+- Rspec
 
 # Getting Started
 
